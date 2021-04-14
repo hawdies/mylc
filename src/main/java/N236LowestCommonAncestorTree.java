@@ -11,7 +11,7 @@
  * tips: 这种递归方式保证了只有最近的祖先节点满足要求,其他的祖先节点都不会满足(inTree && (inLtree || inRtree)) || (inLtree && inRtree)为真.
  *
  * @author hawdies
- * @Date 2021/3/31
+ * @date 2021/3/31
  **/
 public class N236LowestCommonAncestorTree {
 
