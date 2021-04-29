@@ -2,15 +2,15 @@
  * @author hawdies
  * @Date 2021/3/25
  **/
-public class Trie {
+public class N208Trie {
     private boolean isEnd;
-    private Trie[] nexts;
+    private N208Trie[] nexts;
 
     /**
      * Initialize your data structure here.
      */
-    public Trie() {
-        nexts = new Trie[26];
+    public N208Trie() {
+        nexts = new N208Trie[26];
     }
 
     /**
@@ -18,11 +18,11 @@ public class Trie {
      */
     public void insert(String word) {
         // 根节点不存值
-        Trie node = this;
+        N208Trie node = this;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             if (node.nexts[c - 'a'] == null) {
-                node.nexts[c - 'a'] = new Trie();
+                node.nexts[c - 'a'] = new N208Trie();
             }
             node = node.nexts[c - 'a'];
         }
@@ -33,7 +33,7 @@ public class Trie {
      * Returns if the word is in the trie.
      */
     public boolean search(String word) {
-        Trie node = this;
+        N208Trie node = this;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             if (node.nexts[c - 'a'] == null) {
@@ -48,7 +48,7 @@ public class Trie {
      * Returns if there is any word in the trie that starts with the given prefix.
      */
     public boolean startsWith(String prefix) {
-        Trie node = this;
+        N208Trie node = this;
         for (int i = 0; i < prefix.length(); i++) {
             char c = prefix.charAt(i);
             if (node.nexts[c - 'a'] == null) {
