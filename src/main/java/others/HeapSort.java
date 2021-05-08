@@ -14,7 +14,7 @@ public class HeapSort {
     }
 
     private static void heapSort(int[] nums) {
-        for (int i = nums.length / 2; i >= 0; i--) {
+        for (int i = (nums.length / 2) - 1; i >= 0; i--) {
             adjustHeap(nums, i, nums.length);
         }
         for (int j = nums.length - 1; j >= 0; j--) {
