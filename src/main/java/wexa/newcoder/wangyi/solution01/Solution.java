@@ -1,4 +1,4 @@
-package wangyi.solution01;
+package wexa.newcoder.wangyi.solution01;
 
 /**
  * @author hawdies

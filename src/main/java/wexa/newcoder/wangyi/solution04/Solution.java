@@ -1,8 +1,7 @@
-package wangyi.solution04;
+package wexa.newcoder.wangyi.solution04;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 /**

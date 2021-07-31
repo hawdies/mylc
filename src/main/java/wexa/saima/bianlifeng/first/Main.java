@@ -1,4 +1,4 @@
-package wexa.bianlifeng.first;
+package wexa.saima.bianlifeng.first;
 
 import java.util.Scanner;
 

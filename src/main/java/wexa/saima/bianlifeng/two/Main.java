@@ -1,4 +1,4 @@
-package wexa.bianlifeng.two;
+package wexa.saima.bianlifeng.two;
 
 import java.util.*;
 
