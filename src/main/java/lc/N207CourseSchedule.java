@@ -43,10 +43,44 @@ public class N207CourseSchedule {
         return numCourses == 0;
     }
 
+
+    private boolean cycle = false;
+    private boolean[] onStack;
+    private boolean[] visited;
+
+    private boolean directedCycle(int numCourses, int[][] prerequisites) {
+        onStack = new boolean[numCourses];
+        visited = new boolean[numCourses];
+        List<List<Integer>> adjacency = new ArrayList<>();
+        for (int i = 0; i < numCourses; i++) {
+            adjacency.add(new ArrayList<>());
+        }
+        for (int[] temp : prerequisites) {
+            // 邻接表
+            adjacency.get(temp[1]).add(temp[0]);
+        }
+        for (int i = 0; i < numCourses; i++) {
+            if (!visited[i]) {
+                dfs(i, adjacency);
+            }
+        }
+        return !cycle;
+    }
+
     // 通过深度优先遍历判断是否有环
-    private boolean dfs() {
-        // todo
-        return true;
+    private void dfs(int v, List<List<Integer>> adjacency) {
+        visited[v] = true;
+        onStack[v] = true;
+
+        for (Integer w : adjacency.get(v)) {
+            if (cycle) return;
+            if (!visited[w]) {
+                dfs(w, adjacency);
+            } else if (onStack[w]) {
+                cycle = true;
+            }
+        }
+        onStack[v] = false;
     }
 
 }
