@@ -78,7 +78,9 @@ public class N068TextJustification {
         StringBuilder sb = new StringBuilder();
         for (String e : s1) {
             sb.append(e);
-            sb.append(" ");
+            if (sb.length() < maxWidth) {
+                sb.append(" ");
+            }
         }
         sb.delete(sb.length() - 1, sb.length());
         int count = maxWidth - sb.length();
