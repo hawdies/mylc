@@ -1,13 +1,15 @@
 package lc;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
+ * 思路1: 小顶堆 + hash去重
+ * 思路2: 动态规划
+ * <p>
+ * {@link N313SuperUglyNumber}
+ *
  * @author hawdies
  * @date 2021/4/11
  **/
-public class N267UglyNumber2 {
+public class N264UglyNumber2 {
     public static void main(String[] args) {
         System.out.println(nthUglyNumber(7));
     }
