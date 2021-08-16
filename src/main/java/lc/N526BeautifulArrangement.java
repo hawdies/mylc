@@ -19,12 +19,6 @@ import java.util.List;
  **/
 public class N526BeautifulArrangement {
 
-    public static void main(String[] args) {
-        N526BeautifulArrangement demo = new N526BeautifulArrangement();
-        int i = demo.countArrangement02(2);
-        System.out.println(i);
-    }
-
     // 状态压缩 +  动态规划
     public int countArrangement02(int n) {
         int[] dp = new int[1 << n];
@@ -37,7 +31,6 @@ public class N526BeautifulArrangement {
                 }
             }
         }
-
         return dp[(1 << n) - 1];
     }
 
