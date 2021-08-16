@@ -18,7 +18,6 @@ import java.util.List;
  * @date 2021/8/16
  **/
 public class N526BeautifulArrangement {
-
     // 状态压缩 +  动态规划
     public int countArrangement02(int n) {
         int[] dp = new int[1 << n];
